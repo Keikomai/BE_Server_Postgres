@@ -1,0 +1,11 @@
+./yarn/*
++ .turbo
+
+
+node_modules
+
+packages/*/dist
+packages/*/node_modules
+
+.vscode
+**/.env

@@ -1,0 +1,33 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Keikomai/BE_Server_Postgres.git",
+  "author": "Keikomai <keikomai@gmail.com>",
+  "license": "MIT",
+  "private": "true",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "api": "yarn workspace @server/api run start",
+    "db:build": "yarn workspace @server/db run build",
+    "db:migrate": "yarn workspace @server/db run migrate:run",
+    "lint": "eslint 'packages/**/src/**/*.{ts,tsx}'",
+    "lint:fix": "eslint 'packages/**/src/**/*.{ts,tsx}' --fix"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.57.0",
+    "@typescript-eslint/parser": "^5.57.0",
+    "eslint": "^8.40.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "husky": "^8.0.3",
+    "prettier": "^2.8.8",
+    "turbo": "^1.6.3",
+    "typescript": "^5.0.2"
+  }
+}
